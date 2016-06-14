@@ -13,6 +13,10 @@
    else if (typeof define === 'function' && typeof define.amd  === 'object') define(definition)
    else context[name] = definition(name, context)
 }('humane', this, function (name, context) {
+   if (! window) {
+      return;
+   }
+
    var win = window
    var doc = document
 
